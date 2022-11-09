@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem vindo ao Morro Grande!</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon", href="../imagens/Brasão_de_Caieiras.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .container{
+            white-space: nowrap;
+            overflow: scroll;
+            scroll-snap-type: x mandatory;
+            margin: 0 auto;
+            width: 1310px;
+            height: 380px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* CARD 1 */
+        .card{
+            display: inline-block;
+            background-color: white;
+            margin: 15px 20px 0px 15px;
+            width: 380px;
+            height: 300px;
+            text-align: center;
+            box-shadow: 7px 7px 15px 5px grey;
+            border-radius: 25px;
+            scroll-snap-align: center;
+            scroll-snap-stop: always;
+            padding: 5px;
+        }
+        .card h4{
+            margin-top: 10px;
+            text-align: center;
+        }
+        .card img{
+            margin: 10px 0px 0px 0px;
+            width: 340px;
+            height: 250px;
+            border-radius: 12px;
+        }
+
+        .card:after{
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: -1;
+        }
+        .card:hover{
+            transform: scale(1.05, 1.05);
+            background-color: rgb(224, 246, 255);
+        }
+        .card::after{
+            opacity: 1;
+        }
+
+        /* CARD 2 */
+        .card2{
+            display: inline-block;
+            background-color: white;
+            border-radius: 25px;
+            margin: 10px 15px 20px 15px;
+            width: 615px;
+            height: 325px;
+            box-shadow: 7px 7px 15px 5px grey;
+            text-align: center;
+        }
+        .card2 img{
+            margin-top: 10px;
+            border-radius: 5px;
+            width: 535px;
+            height: 265px;   
+        }
+        .card2 h4{
+            margin-top: 5px;
+        }
+
+        .card2:after{
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: -1;
+        }
+        .card2:hover{
+            transform: scale(1.03, 1.03);
+            background-color: rgb(223, 255, 227);   
+        }
+        .card2::after{
+            opacity: 1;
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <nav class="cabeçalho" style="font-family: 'Montserrat', sans-serif;">
+            <button id="show-or-hide" style="color: rgb(0, 0, 0);"><h1 id="título"><ins>Morro Grande</ins></h1></button>
+            <a href="#informações"><p>Informações demográficas</p></a>
+            <a href="#História"><p>História</p></a>
+            <a href="#Educação"><p>Educação</p></a>
+            <a href="#Lazer"><p>Lazer</p></a>
+            <a href="#Comércio"><p>Comércio local</p></a>
+            <a href="../Destaque/index.html"><p>Destaque</p></a>
+            <a href="../Referências/referências.html"><p>Referências</p></a>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29297.71203031741!2d-46.69847119999999!3d-23.3804742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cee52d50c6d475%3A0xecf0d27f363fe4cb!2sMorro%20Grande%2C%20Caieiras%20-%20SP%2C%2007700-000!5e0!3m2!1spt-BR!2sbr!4v1662377882786!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>            
+        </nav>
+    
+        <!-- ANIMAÇÃO SLIDESHOW -->
+        <section class="slider">
+
+        <div class="slides">
+            <!-- Radio Buttons-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <!-- Imagens dos Slides -->
+            <div class="slide first">
+                <img src="../imagens/mapa.png", alt="Imagem1"/>
+            </div>
+            <div class="slide">
+                <img src="../imagens/condomínio2.png", alt="Imagem2"/>
+            </div>
+            <div class="slide">
+                <img src="../imagens/EMEMI Geraldo Malta.png", alt="Imagem3"/>
+            </div>
+            <div class="slide">
+                <img src="../imagens/Comércio local/hortifruti.png", alt="Imagem4"/>
+            </div>
+            
+
+            <!-- Navegação -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+        
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+
+        </section>
+        <script src="script.js"></script>
+
+
+        <!-- "SETINHA QUE FAZ SUBIR AO TOPO DA PÁGINA" -->
+        <a id="top-arrow" href="#">&#9651;</a>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+        <!-- "INFORMAÇÕES DEMOGRÁFICAS🌍" ORGANIZADO -->
+        <section class="demográfico">
+                <h2 id="informações">👨‍👩‍👧‍👦 INFORMAÇÕES DEMOGRÁFICAS</h2>
+                <table border="10" width="75%">
+                    <tr>
+                        <th>Habitantes</th>
+                        <td style="text-align: center;">2995</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Km²</th>
+                        <td style="text-align: center;">11,19km²</td>
+                    </tr>
+                
+                    <tr>
+                        <th>Densidade Demográfica</th>
+                        <td style="text-align: center;">267,58</td>
+                    </tr>   
+                </table>
+                <p>Informações retiradas com base no Censo de 2010</p>
+        </section>
+
+
+        <!-- "HISTÓRIA 🏛" ORGANIZADO -->
+        <section class="history" style="font-family: 'Montserrat', sans-serif;">
+            <h2 id="História">📖 HISTÓRIA</h2>
+            <p id="Toninho">Todas as informações a seguir foram coletadas em um telefonema com o <strong>Senhor José Antônio Rodrigues da Silva mas apelidado de Toninho</strong>, morador do bairro a 56 anos. Um Senhor muito simpático que se dispoz a passar as informações a seguir para o trabalho :)</p>
+            <br>
+
+            <!-- Sobre o Bairro -->
+            <article id="bairro">
+                <h3>Sobre o Bairro</h3>
+                <ul>
+                    <li>Bairro mais antigo de Caieiras tendo mais de 110 anos. Isso acontece porque ele veio junto com a igreja católica de São Pedro;</li>
+                    <li>Na época era tudo rural, estrada de terra e 3 lâmpadas de iluminação no centro da avenida do bairro;</li>
+                    <li>Trabalho rural e agrícola movimentava o bairro porque todo mundo tinha horta, galinha e gado, em que nos anos 70, era principalmente gado leiteiro;</li>
+                    <li><ins>Frases de Toninho:</ins></li>
+                    <ul>
+                        <li><em>"Hoje, Morro Grande repartiu muito"</em> Pequenos bairros dentro do bairro principal;</li>
+                        <li><em>"Morro Grande vai crescer demais";</em></li>
+                        <li><em>"se não via uma pessoa obesa, era muito difícil porque tomava água de nascente, andava muito, comia uma alimentação saudável."</em></li>
+                    </ul>
+                    
+                </ul>
+            </article>
+            <br>
+
+            <!-- Sobre a Educação do Bairro -->
+            <article id="educação-bairro">
+                <h3>Como era a educação</h3>
+                <ul>
+                    <li>A EMEF Profa Marina Vieira Bayerlein foi fundada em 1969, se chamando algo semelhante a "Escola de Emergência." que se estendia até o 4°Ano do Ensino Fundamental I e para fazer os anos seguintes, era necessário ir para uma outra escola no bairro vizinho(Laranjeiras);</li>
+                    <li>Seu Toninho e sua irmã estudaram lá;</li>
+                    <li><em>"Os professores vinham de charrete para a escola"</em> relata Senhor Toninho.</li>
+                </ul>
+            </article>
+            <br>
+
+            <!-- Sobre o Comércio do Bairro -->
+            <article id="comercio-bairro">
+                <h3>Como era o comércio</h3>
+                <ul>
+                    <li>A 1°Empresa(CNPJ) do bairro foi uma metalúrgica de ventiladores, tanto é que grande parte das pessoas no bairro trabalharam nela, incluindo o Senhor Toninho que relatou ser <em>"Boa nos padrões da época"</em>;</li>
+                    <li>Vendia-se caixotes de arroz, feijão e batata no centro do bairro;</li>
+                    <li>Existia várias marcas de feijão;</li>
+                    <li>Pão era muito difícil de encontrar;</li>
+                    <li><ins>Frases de Toninho:</ins></li>
+                    <ul>
+                        <li><em>"Todo mundo trabalhava lá, até eu fui";</em></li>
+                        <li><em>"Tomávamos café com farinha de milho e bolo."</em></li>
+                    </ul>
+                </ul>
+            </article>
+            <br>
+
+            <!-- Sobre o Campinho de Futebol do Bairro -->
+            <article id="campinho-bairro">
+                <h3>Como era o Campinho</h3>
+                <ul>
+                    <li>Um campo muito bem localizado, criado em meados de 1925;</li>
+                    <li>Foi criado um time de futebol em 1925, chamado "Esporte Clube Morro Grande" e seus jogadoes vinham participar das partidas através de caminhões.</li>
+                </ul>
+            </article>
+            <br>
+
+            <!-- Festas tradicionais -->
+            <article id="festas">
+                <h3>Festas tradicionais</h3>
+                <p id="festa">No meio de Julho celebrava-se a tradicional festa do morro Grande que ocorria na igreja católica de São pedro. Essa festa era esperada pelos moradores o ano inteiro, em que se tinha muita diversão, banda, fogueira e baile.</p>
+            </article>
+        </section>
+
+        <!-- "Educação do Bairro 📚" ORGANIZADO -->
+            <section class="Education">
+                <h2 id="Educação">👩🏽‍🏫 EDUCAÇÃO DO BAIRRO</h2>
+
+                <!-- EMEMI GERALDO MALTA-->
+                <p id="nome_da_crechê" style="color: blue;"><strong>EMEMI GERALDO MALTA</strong></p>
+                <div class="descrição_EMEMI">
+                    <p>Geraldo Malta é uma escola pública de Caieiras/SP que atende crianças do berçário até o pré, oferecendo toda a estrutura necessária para o conforto e desenvolvimento educacional dos seus alunos, como por exemplo: Parque Infantil, Refeitório, Sala de leitura, Pátio Coberto, Pátio descoberto, Sala dos Professor e Diretoria.</p>
+                    <ul>
+                        <li><strong>Fone:</strong> (11) 4899-0050</li>
+                        <li><strong>Email para contato: </strong>ememi-gmalta@caieiras.sp.gov.br</li>
+                        <li><strong>Código INEP: </strong>35089436</li>
+                        <li><strong>Endereço:</strong></li>
+                        <ol type="i">
+                            <li>Rua Marciano Dartora, 50</li>
+                            <li>Morro Grande</li>
+                            <li>Caieiras - SP</li>
+                            <li>CEP: 07700-000</li>
+                        </ol>
+                    </ul>
+                </div>
+                <img src="../imagens/EMEMI Geraldo Malta.png", alt="EMEMI Geraldo Malta" id="crechê">
+                <br>
+                <br>
+
+                <!-- EMEF PROFESSORA MARINA VIEIRA BAYERLEIN -->
+                <hr>
+                <hr>
+                <p id="nome_da_escola" style="color: blue;"><strong>EMEF PROFa. MARINA VIEIRA BAYERLEIN</strong></p>
+                <div class="descrição_EMEF">
+                    <p>É uma escola pública(Escola Municipal de Ensino Fundamental) que atende crianças do Ensino Fundamental I , tendo como objetivo, levar um bom aprendizado aos seus alunos oferecendo uma infraestrutura adequada sendo ela: dependências com assesibilidade, alimentação fornecida, água filtrada e tratada, sala de leitura, biblioteca, cozinha, alimentação, energia elétrica, salas dos professores.</p>
+                    <ul>
+                        <li><strong>Fone:</strong> (11) 4442-9014</li>
+                        <li><strong>Email para contato: </strong>emef-mbayerlein@caieiras.sp.gov.br</li>
+                        <li><strong>Código INEP: </strong>35272826</li>
+                        <li><strong>Endereço:</strong></li>
+                        <ol type="i">
+                            <li>Avenida Dr. Olindo Dartora, 4864, Morro Grande</li>
+                            <li>Morro Grande</li>
+                            <li>Caieiras - SP</li>
+                            <li>CEP: 07700-000</li>
+                        </ol>
+                    </ul>
+                </div>
+                <img src="../imagens/EMEF Marina Vieira Bayerlein.jpeg", alt="EMEF Marina Vieira Bayerlein" id="Marina">
+                <p id="PS" style="font-family: 'Montserrat', sans-serif;;">Foto tirada no dia 05/07/2022 (em reforma)</p>
+
+            </section>
+
+
+        <!-- "LAZER 🪑" ORGANIZADO -->
+            <section class="Conforto">
+                <h2 id="Lazer">🪑💺 LAZER</h2>         
+                <!-- CAMPO DE FUTEBOL -->
+                <h3 id="campo" style="font-family: 'Montserrat', sans-serif;"><ins>Campo de futebol</ins></h3>
+                <hr id="traço1">
+                <hr id="traço2">
+
+                <br>
+                <br>
+                <img src="../imagens/campinho.png", alt="campinho de futebol" id="imagem1">
+                <img src="../imagens/time.png", alt="campinho de futebol" id="imagem2">
+                <img src="../imagens/jogo.png", alt="jogadores jogando", id="imagem3">
+                <img src="../imagens/jogador1.png", alt="jogador de vermelho", id="imagem4">
+                <img src="../imagens/jogador2.png", alt="goleiro", id="imagem5">
+            
+            <br>
+            <br>
+            <hr>
+            <hr>
+            <!-- OUTRA INFORMAÇÃO -->
+            </section>
+
+        <!-- "COMÉRCIO LOCAL 🏪" ORGANIZADO -->
+            <section class="Varejo">
+                <h2 id="Comércio" style="font-family: 'Montserrat', sans-serif;">🏪 COMÉRCIO LOCAL</h2>
+                <p align="center" style="font-family: 'Montserrat', sans-serif;">Fotos tiradas em Abril de 2021 (Fonte: Google Maps)</p>
+                
+                <article class="container">
+                    <!-- Chaveiro Renato -->
+                    <div class="card">
+                        <a href=https://g.page/Chaveiro-Renato-morro-grande-cai?share target="_blank"><img src="../imagens/Comércio local/Chaveiro.png", alt="chaveiro"></img></a>
+                        <h4><a href=https://g.page/Chaveiro-Renato-morro-grande-cai?share target="_blank" style="color:rgb(0, 0, 0)">Chaveiro Renato</a></h4>
+                    </div>
+
+                    <!-- FoodTruck - 3 Marias -->
+                    <div class="card">
+                        <img src="../imagens/Comércio local/foodtruck.png", alt="FoodTruck">
+                        <h4>FoodTruck - 3 Marias</h4>
+                    </div>
+
+                    <!-- Empório/Padaria - 2 Meninas -->
+                    <div class="card">
+                        <a href="https://www.google.com/maps/place/Emp%C3%B3rio+Duas+Meninas/@-23.3739898,-46.7012271,3a,75y,20.51h,76.69t/data=!3m6!1e1!3m4!1sLDP0F_s-0DmHCegJEQjq3w!2e0!7i16384!8i8192!4m13!1m7!3m6!1s0x94cee52e446b9a7b:0x2e144ae1d672ed66!2sAv.+Dr.+Olindo+Dartora,+5049+-+Morro+Grande,+Caieiras+-+SP,+07700-000!3b1!8m2!3d-23.3738909!4d-46.701111!3m4!1s0x94cee54cfd84e89d:0x2b08140d2e2b6724!8m2!3d-23.3739209!4d-46.7012027" target="_blank"><img src="../imagens/Comércio local/padaria.png", alt="empório & Padaria"></a>
+                        <h4><a href="https://www.google.com/maps/place/Emp%C3%B3rio+Duas+Meninas/@-23.3739898,-46.7012271,3a,75y,20.51h,76.69t/data=!3m6!1e1!3m4!1sLDP0F_s-0DmHCegJEQjq3w!2e0!7i16384!8i8192!4m13!1m7!3m6!1s0x94cee52e446b9a7b:0x2e144ae1d672ed66!2sAv.+Dr.+Olindo+Dartora,+5049+-+Morro+Grande,+Caieiras+-+SP,+07700-000!3b1!8m2!3d-23.3738909!4d-46.701111!3m4!1s0x94cee54cfd84e89d:0x2b08140d2e2b6724!8m2!3d-23.3739209!4d-46.7012027" target="_blank" style="color:black">Empório/Padaria - 2 Meninas</a></h4>
+                    </div>
+
+                    <!-- Loja da Lina -->
+                    <div class="card">
+                        <img src="../imagens/Comércio local/loja.png", alt="Loja da Lina">
+                        <h4>Loja da Lina</h4>
+                    </div>
+
+                    <!-- Adega & Morro -->
+                    <div class="card">
+                        <img src="../imagens/Comércio local/Adega.png", alt="Adega disfarçado de Cabeleireiro">
+                        <h4>Adega & Morro</h4>
+                    </div>
+
+                    <!-- Supermercado do Bruno -->
+                    <div class="card">
+                        <a href="https://www.google.com/maps/place/Morr%C3%A3o+da+Constru%C3%A7%C3%A3o/@-23.3735869,-46.7056383,3a,75y,117.54h,96.95t/data=!3m6!1e1!3m4!1sug8UAejekFKiBOVNoDHmBQ!2e0!7i16384!8i8192!4m5!3m4!1s0x94cee53a0352c5d1:0x6047776426787973!8m2!3d-23.3737527!4d-46.7060246" target="_blank"><img src="../imagens/Comércio local/Mini market.png", alt="Mini-market"></a>
+                        <a href="https://www.google.com/maps/place/Morr%C3%A3o+da+Constru%C3%A7%C3%A3o/@-23.3735869,-46.7056383,3a,75y,117.54h,96.95t/data=!3m6!1e1!3m4!1sug8UAejekFKiBOVNoDHmBQ!2e0!7i16384!8i8192!4m5!3m4!1s0x94cee53a0352c5d1:0x6047776426787973!8m2!3d-23.3737527!4d-46.7060246" target="_blank" style="color: black"><h4>Supermercado do Bruno</h4></a>
+                    </div>
+
+                    <!-- Dazzi Hair -->
+                    <div class="card">
+                        <a href="https://www.google.com/maps/place/Dazzi+Hair/@-23.3743245,-46.7006374,3a,75y,22.39h,95.27t/data=!3m6!1e1!3m4!1sovDZ7r8ALCshHpn-Gox_Vw!2e0!7i16384!8i8192!4m5!3m4!1s0x94cee52e3fcc8ea5:0x8457dbaa67d22d15!8m2!3d-23.3742645!4d-46.700586" target="_blank"><img src="../imagens/Comércio local/salão.png", alt="Salão de Beleza"></a>
+                        <a href="https://www.google.com/maps/place/Dazzi+Hair/@-23.3743245,-46.7006374,3a,75y,22.39h,95.27t/data=!3m6!1e1!3m4!1sovDZ7r8ALCshHpn-Gox_Vw!2e0!7i16384!8i8192!4m5!3m4!1s0x94cee52e3fcc8ea5:0x8457dbaa67d22d15!8m2!3d-23.3742645!4d-46.700586" target="_blank" style="color:rgb(0, 0, 0)"><h4>Dazzi Hair - Salão de Beleza</h4></a>
+                    </div>
+
+                    <!-- Hortifruti - Boa Vida -->
+                    <div class="card">
+                        <a href="https://www.google.com/maps/@-23.3734018,-46.7039616,3a,75y,165.54h,89.14t/data=!3m6!1e1!3m4!1s6JNq3SjEQSNcUsnmufkAnw!2e0!7i16384!8i8192" target="_blank"><img src="../imagens/Comércio local/hortifruti.png", alt="hortifruti"></a>
+                        <a href="https://www.google.com/maps/@-23.3734018,-46.7039616,3a,75y,165.54h,89.14t/data=!3m6!1e1!3m4!1s6JNq3SjEQSNcUsnmufkAnw!2e0!7i16384!8i8192" target="_blank" style="color: black"><h4>hortifruti - Boa Vida</h4></a>
+                    </div>
+                </article>
+
+                <br>
+                <br>
+                <article class="container">  
+                    <!-- Supermercado Macedo -->
+                    <div class="card2">
+                        <a href="https://www.google.com/maps/place/Pizzaria+arte+em+fam%C3%ADlia/@-23.3734527,-46.7025679,3a,75y,310.76h,82.34t/data=!3m6!1e1!3m4!1su2gOXnK08IPCNJ6OtZ8bDA!2e0!7i16384!8i8192!4m13!1m7!3m6!1s0x94cee52e446b9a7b:0x2e144ae1d672ed66!2sAv.+Dr.+Olindo+Dartora,+5049+-+Morro+Grande,+Caieiras+-+SP,+07700-000!3b1!8m2!3d-23.3738909!4d-46.701111!3m4!1s0x94cee5e956a192ef:0x2b1620078fb2e28c!8m2!3d-23.3733078!4d-46.702665" target="_blank"><img src="../imagens/Comércio local/supermercado & Pizzaria.png", alt="Supermercado & Pizzaria"></a>
+                        <a href="https://www.google.com/maps/place/Pizzaria+arte+em+fam%C3%ADlia/@-23.3734527,-46.7025679,3a,75y,310.76h,82.34t/data=!3m6!1e1!3m4!1su2gOXnK08IPCNJ6OtZ8bDA!2e0!7i16384!8i8192!4m13!1m7!3m6!1s0x94cee52e446b9a7b:0x2e144ae1d672ed66!2sAv.+Dr.+Olindo+Dartora,+5049+-+Morro+Grande,+Caieiras+-+SP,+07700-000!3b1!8m2!3d-23.3738909!4d-46.701111!3m4!1s0x94cee5e956a192ef:0x2b1620078fb2e28c!8m2!3d-23.3733078!4d-46.702665" target="_blank" style="color: black"><h4>Supermercado Macedo e Pizzaria Arte em Família</h4></a>
+                    </div>
+
+                    <!-- Pet Hanna -->
+                    <div class="card2">
+                        <a href="https://www.google.com/maps/place/Pet+Hanna/@-23.3735869,-46.7056383,3a,75y,347.48h,87.35t/data=!3m6!1e1!3m4!1sug8UAejekFKiBOVNoDHmBQ!2e0!7i16384!8i8192!4m5!3m4!1s0x94cee52895a2daa9:0x94d25d1bd1f99e75!8m2!3d-23.3734698!4d-46.7056487" target="_blank"><img src="../imagens/Comércio local/PetHanna.png", alt="PetHanna"></a>
+                        <a href="https://www.google.com/maps/place/Pet+Hanna/@-23.3735869,-46.7056383,3a,75y,347.48h,87.35t/data=!3m6!1e1!3m4!1sug8UAejekFKiBOVNoDHmBQ!2e0!7i16384!8i8192!4m5!3m4!1s0x94cee52895a2daa9:0x94d25d1bd1f99e75!8m2!3d-23.3734698!4d-46.7056487" target="_blank" style="color:rgb(0, 0, 0)"><h4>Pet Hanna - Pet Shop</h4></a>
+                    </div>
+
+                    <!-- Lava Car -->
+                    <div class="card2">
+                        <a href="https://g.page/Aladim-lava-car-e-moto?share" target="_blank"><img src="../imagens/Comércio local/Lava Car.png", alt="Lava Car"></a>
+                        <a href="https://g.page/Aladim-lava-car-e-moto?share" target="_blank" style="color:rgb(0, 0, 0)"><h4>Aladim - Lava Car</h4></a>
+                    </div>
+
+                    <!-- Barbearia -->
+                    <div class="card2">
+                        <a href="https://www.google.com/maps/place/Telina+E+Ronaldo/@-23.3736832,-46.7063151,3a,75y,127.33h,92.61t/data=!3m6!1e1!3m4!1sIhEKR7yc47Cd5hec4wOX9A!2e0!7i16384!8i8192!4m5!3m4!1s0x94cee5288d0e8583:0xa0582b86f8a7fded!8m2!3d-23.3737505!4d-46.7062234" target="_blank"><img src="../imagens/Comércio local/BarberShop.png", alt="Barber Shop"></a>
+                        <a href="https://www.google.com/maps/place/Telina+E+Ronaldo/@-23.3736832,-46.7063151,3a,75y,127.33h,92.61t/data=!3m6!1e1!3m4!1sIhEKR7yc47Cd5hec4wOX9A!2e0!7i16384!8i8192!4m5!3m4!1s0x94cee5288d0e8583:0xa0582b86f8a7fded!8m2!3d-23.3737505!4d-46.7062234" target="_blank" style="color:rgb(0, 0, 0)"><h4>Barber Shop</h4></a>
+                    </div>
+
+                    <!-- Lanchonete do Robson -->
+                    <div class="card2">
+                        <a href="https://www.google.com/maps/place/Costelaria+do+Robson/@-23.3734321,-46.7034105,3a,75y,130.34h,94.28t/data=!3m6!1e1!3m4!1sLIiD1fAD5AxeyRsBwHx7Uw!2e0!7i16384!8i8192!4m5!3m4!1s0x94cee52f2321660b:0x23a4548807abd210!8m2!3d-23.3735389!4d-46.7033642" target="_blank"><img src="../imagens/Comércio local/lanchonete.png", alt="Lanchonete do Robson"></a>
+                        <a href="https://www.google.com/maps/place/Costelaria+do+Robson/@-23.3734321,-46.7034105,3a,75y,130.34h,94.28t/data=!3m6!1e1!3m4!1sLIiD1fAD5AxeyRsBwHx7Uw!2e0!7i16384!8i8192!4m5!3m4!1s0x94cee52f2321660b:0x23a4548807abd210!8m2!3d-23.3735389!4d-46.7033642" target="_blank" style="color:rgb(0, 0, 0)"><h4>Lanchonete do Robson</h4></a>
+                    </div>
+
+                    <!-- Bar & Restaurante -->
+                    <div class="card2">
+                        <a href="https://www.google.com/maps/place/Pizzaria+arte+em+fam%C3%ADlia/@-23.3734527,-46.7025679,3a,75y,310.76h,82.34t/data=!3m6!1e1!3m4!1su2gOXnK08IPCNJ6OtZ8bDA!2e0!7i16384!8i8192!4m13!1m7!3m6!1s0x94cee52e446b9a7b:0x2e144ae1d672ed66!2sAv.+Dr.+Olindo+Dartora,+5049+-+Morro+Grande,+Caieiras+-+SP,+07700-000!3b1!8m2!3d-23.3738909!4d-46.701111!3m4!1s0x94cee5e956a192ef:0x2b1620078fb2e28c!8m2!3d-23.3733078!4d-46.702665" target="_blank"><img src="../imagens/Comércio local/bar & restaurante.png", alt="bar e restaurante"></a>
+                        <a href="https://www.google.com/maps/place/Pizzaria+arte+em+fam%C3%ADlia/@-23.3734527,-46.7025679,3a,75y,310.76h,82.34t/data=!3m6!1e1!3m4!1su2gOXnK08IPCNJ6OtZ8bDA!2e0!7i16384!8i8192!4m13!1m7!3m6!1s0x94cee52e446b9a7b:0x2e144ae1d672ed66!2sAv.+Dr.+Olindo+Dartora,+5049+-+Morro+Grande,+Caieiras+-+SP,+07700-000!3b1!8m2!3d-23.3738909!4d-46.701111!3m4!1s0x94cee5e956a192ef:0x2b1620078fb2e28c!8m2!3d-23.3733078!4d-46.702665" target="_blank" style="color: black"><h4>Bar e Restaurante</h4></a>
+                    </div>
+                </article>
+            </section>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- "COMENTÁRIOS E FEEDBACK" ORGANIZADO -->
+        <section class="coment">
+            <h2 id="feedback"><ins>Comentários e Feedbacks</ins></h2>
+            <label for="ftexta">Preencha no campo abaixo:</label>
+            <br>
+            <br>
+            <textarea name="ftexta" id="ftexta" cols="80" rows="10"></textarea>
+            <br>
+            <input type="submit" id="send" value="Enviar">
+
+            <br>
+            <br>
+            <br>
+            <label>Avalie com as estrelas abaixo:</label>
+            <form>
+                <div class="rating">
+                    <input type="radio" name="rate" id="rating-opt5" data-idx="0" hidden>
+                    <label for="rating-opt5"><span>Gostei muito</span></label>
+
+                    <input type="radio" name="rate" id="rating-opt4" data-idx="1" hidden>
+                    <label for="rating-opt4"><span>Gostei</span></label>
+
+                    <input type="radio" name="rate" id="rating-opt3" data-idx="2" hidden>
+                    <label for="rating-opt3"><span>Mediano</span></label>
+
+                    <input type="radio" name="rate" id="rating-opt2" data-idx="3" hidden>
+                    <label for="rating-opt2"><span>Não gostei</span></label>
+
+                    <input type="radio" name="rate" id="rating-opt1" data-idx="4" hidden>
+                    <label for="rating-opt1"><span>Péssimo</span></label>
+
+                </div>
+            </form>
+        </section>
+
+        <br>
+        <br>
+        
+        <!-- "RODAPÉ" ORGANIZADO -->
+        <footer>
+            <article>
+                <div id="títulos">
+                    <h3>História</h3>
+                    <h3>Educação</h3>
+                    <h3 id="detaque">Destaque</h3>
+                </div>
+
+                <div id="text1">
+                    <p><a href="#bairro" style="text-decoration: none">Sobre o bairro</a></p>
+                    <p><a href="#educação-bairro" style="text-decoration: none">Como era a Educação</a></p>
+                    <p><a href="#comercio-bairro" style="text-decoration: none">Como era o Comércio</a></p>
+                    <p><a href="#campinho-bairro" style="text-decoration: none">Como era o Campinho</a></p>
+                    <p><a href="#festas" style="text-decoration: none">Festas tradicionais</a></p>
+                </div>
+
+                <div id="text2">
+                    <p><a href="#nome_da_crechê" style="text-decoration: none">EMEMI GERALDO MALTA</a></p>
+                    <p><a href="#nome_da_escola" style="text-decoration: none">EMEF Profa MARINA VIEIRA BAYERLEIN</a></p>
+                </div>
+                
+                <div id="text3">
+                    <p><a href="../Destaque/index.html/..#capela" style="text-decoration: none">Capela de São Pedro</a></p>
+                    <p><a href="../Destaque/index.html/..#ovni" style="text-decoration: none">OVNI's e Aliens em Caieiras?</a></p>
+                    <a href="../Destaque/index.html/..#recanto" style="text-decoration: none">Recanto das Aves</a>
+                </div>
+            </article>
+
+            <br>
+            <hr>
+            <br>
+
+            <div class="Finalização">
+                <p>Este site elaborado pelo aluno do 9°Ano E do Instituto Germinare foi finalizado no dia 05/11/2022</p>
+                <h1>Samuel Pereira Malaio n26 9E</h1>
+                <img src="../imagens/Logo.png">
+                <br>
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>

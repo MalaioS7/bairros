@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body{
+    margin: 0;
+    font-family: Arial;
+    display: flex;
+    background: linear-gradient(45deg, #45EBA5, #21ABA5, #1D566E);
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+
+@keyframes colors{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/* CABEÇALHO */
+.cabeçalho{
+    background: linear-gradient(45deg,#22577A, #38A3A5, #57CC99,#80ED99);
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    margin: 0;
+    border: solid 2px white;
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+
+@keyframes colors{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.cabeçalho #título{
+    margin-top: 25px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 32px;
+}
+
+.cabeçalho p{
+    font-size: 18px;
+    display: inline-block;
+    color:black;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+/* Apresentação */
+.Apresentação{
+    margin-top: 110px;
+}
+
+#titulo{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: -20px;
+    margin-right: 40px;
+}
+
+#tracinho1{
+    margin: 50px 0px 0px 0px;
+    width: 480px;
+}
+
+#tracinho2{
+    margin: -40px 0px 0px 850px;
+    width: 495px;
+}
+
+
+/* Informações/Conteúdo */
+.sources{
+    margin: 180px 0px 0px -1315px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    /* tive que colocar essas margens absurdas porque sem elas (e eu não sei o porquê), essas fontes ficam todas alinhadas no canto direito. (P.S: Desculpa professor)*/
+}

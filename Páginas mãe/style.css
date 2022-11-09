@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body{
+    margin: 0;
+    font-family: Arial;
+    display: flex;
+    background: linear-gradient(90deg, #45EBA5, #21ABA5, #1D566E);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CABEÇALHO */
+.cabeçalho{
+    background: linear-gradient(45deg,#22577A, #38A3A5, #57CC99,#80ED99);
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    margin: 0;
+    border: solid 2px white;
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+@keyframes colors{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.cabeçalho #título{
+    margin-top: 25px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 32px;
+}
+
+.mapa{
+    margin-top: 5px;
+    margin-left: 10px;
+    display: none;
+    border: dotted #1D566E;
+    background-color: white;
+    width: 600px;
+}
+
+.cabeçalho p{
+    font-size: 18px;
+    display: inline-block;
+    color:black;
+    margin-left: 22px;
+    font-weight: bold;
+}
+
+button{
+    background: linear-gradient(45deg,#22577A, #38A3A5, #57CC99,#80ED99);
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 25px;
+    height: 0px;
+    border: 0px solid black;
+}
+
+/* ANIMAÇÃO SLIDESHOW */
+.slider{
+    margin: 0 auto;
+    margin-top: 110px;
+    margin-left: 210px;
+    width: 1000px;
+    height: 525px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 1000px;
+    border-radius: 25px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    margin-left: 50px;
+}
+
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    margin-top: 105px;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~.navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~.navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+
+#radio3:checked ~.navigation-auto .auto-btn3{
+    background-color: #fff;
+}
+
+#radio4:checked ~.navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
+
+#top-arrow{
+    text-decoration: none;
+    font-size: 22px;
+    color:white;
+    background-color: blue;
+    position: fixed;
+    text-align: center;
+    padding: 10px;
+    right: 20px;
+    bottom: 10px;
+    width: 28px;
+    height: 28px;
+    border: solid 2px white;
+    border-radius: 25px;
+    box-shadow: 3px 3px 10px;
+}
+
+/* INFORMAÇÕES DEMOGRÁFICAS */
+#informações{
+    margin-top: 15px;
+    margin-left: 15px;
+    text-align: center;
+    font-size: 27px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.demográfico p{
+    margin-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.demográfico table{
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.demográfico{
+    margin-top: 0px;
+    margin-left: 5px;
+    border-radius: 10px;
+    height: 200px;
+    width: 1335px;
+    background-color: white;
+}
+
+
+
+/* HISTÓRIA */
+#História{
+    margin-top: 15px;
+    margin-left: 0px;
+    text-align: center;
+    font-size: 27px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.history{
+    margin-top: 40px;
+    border-radius: 10px;
+    height: 1000px;
+    width: 1335px;
+    background-color: white;
+    margin-left: 5px;
+}
+
+#Toninho{
+    margin-top: -5px;
+    margin-left: 15px;
+}
+
+h3{
+    margin-left: 15px;
+    margin-bottom: -5px;
+}
+
+#festa{
+    margin-left: 20px;
+}
+
+/* EDUCAÇÃO NO BAIRRO */
+#Educação{
+    font-size: 27px;
+    margin-top: 15px;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.Education{
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 5px;
+    margin-top: 40px;
+    border-radius: 10px;
+    height: 1045px;
+    width: 1335px;
+    background-color: white;
+}
+
+/* ememi Geraldo Malta */
+.Education #nome_da_crechê{
+    border: solid blue 2px;
+    border-radius: 25px;
+    text-align: center;
+    height: 15px;
+    width: 520px;
+    padding: 8px;
+    margin-left: 50px;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+}
+
+.Education #crechê{
+    margin-top: -355px;
+    margin-right: 50px;
+    height: 350px;
+    width: 650px;
+    border-radius: 25px;
+    border: solid 1px blue;
+    display: inline-block;
+    float: right;
+}
+
+.Education .descrição_EMEMI{
+    margin: -15px 750px 0px 50px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+}
+
+/* emef Profa. Marina Vieira Bayerlein */
+.Education #nome_da_escola{
+    border: solid blue 2px;
+    border-radius: 25px;
+    text-align: center;
+    height: 15px;
+    width: 550px;
+    padding: 8px;
+    margin-left: 750px;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Education .descrição_EMEF{
+    margin: -20px 45px 0px 760px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+}
+
+.Education #Marina{
+    margin-left: 20px;
+    margin-top: -340px;
+    height: 400px;
+    width: 700px;
+    border: solid 1px blue;
+    border-radius: 25px;
+    display: inline-block;
+    float: left;
+}
+
+.Education #PS{
+    clear: left;
+    margin-left: 25px;
+}
+
+
+/* LAZER */
+.Conforto{
+    margin-left: 5px;
+    margin-top: 40px;
+    border-radius: 10px;
+    height: 1350px;
+    width: 1335px;
+    background-color: white;
+    text-align: center;
+}
+
+#Lazer{
+    margin-top: 15px;
+    margin-left: 15px;
+    text-align: center;
+    font-size: 27px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#traço1{
+    margin: -10px 0px 0px 5px;
+    width: 550px;
+}
+
+#traço2{
+    margin: -2px 0px 0px 770px;
+    width: 550px;
+}
+
+#campo{    
+    margin-left: -4px;
+}
+
+.Conforto #imagem1{
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 75%;
+    height: 28%;
+}
+
+.Conforto #imagem2{
+    border-radius: 20px;
+    border: solid 1px black;
+    width: 45%;
+    height: 24%;
+}
+
+.Conforto #imagem3{
+    border-radius: 20px;
+    border: solid 1px black;
+    width: 29%;
+    height: 24%;
+}
+
+.Conforto #imagem4, #imagem5{
+    border: solid 0.5px black;
+    border-radius: 20px;
+    width: 27%;
+    height: 30%;
+}
+
+
+/* COMÉRCIO LOCAL */
+.Varejo{
+    margin-left: 8px;
+    margin-top: 40px;
+    border-radius: 10px;
+    height: 950px;
+    width: 1335px;
+    background-color: white;
+}
+
+#Comércio{
+    margin-top: 15px;
+    margin-left: 15px;
+    text-align: center;
+    font-size: 27px;
+}
+
+
+.arrow{
+    font-size: 60px;
+    margin: 100px 0px 0px 1295px;
+}
+
+
+/* COMENTÁRIOS E FEEDBACK */
+.coment{
+    margin-left: 8px;
+    border-radius: 10px;
+    height: 450px;
+    width: 1335px;
+    margin-top: 15px;
+    background-color: white;
+}
+
+#feedback{
+    margin-left: 15px;
+    text-align: center;
+    font-size: 27px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.coment label{
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea{
+    margin-left: 15px;
+}
+
+.coment input{
+    margin-left: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Efeito das estrelas */
+.rating{
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+    padding: 0 50px 8%;
+    color: gray;
+}
+.rating label{
+    float: right;
+    padding: 0;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.rating label::before{
+    content: "\2606";
+    padding-bottom: 8px;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.rating span{
+    opacity: 0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    font-size: 1rem;
+    white-space: nowrap;
+    transition: 0.15s ease-out;
+    pointer-events: none;
+    letter-spacing: -2px;
+    transform: translateY(-50%);
+}
+.rating label:hover span{
+    opacity: 1;
+    transform: none;
+    letter-spacing: 0;
+}
+
+input:checked ~ label:before{
+    content: "\2605";
+    color: orange;
+    filter: drop-shadow(0 0 4px);
+    transform: rotate(.2turn);
+    transition-delay: calc(0.1*attr(data-idx integer));
+}
+
+
+/* RODAPÉ */
+footer{
+    margin: 0;
+    height: 6.53%;
+    width: 1347px;
+    background-color: #00A64F;
+    border: solid black 1px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer hr{
+    margin-top: 80px;
+}
+
+footer article{
+    margin: -15px 0px 0px 75px;
+}
+
+/* Finalização */
+footer .Finalização{
+    margin-top: -7px;
+}
+
+footer .Finalização p{
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+footer .Finalização h1{
+    margin-top: 30px;
+    text-align: center;
+    color: #1c1c1c;
+}
+
+footer .Finalização img{
+    background-color: white;
+    margin-top: -80px;
+    margin-right: 120px;
+    float: right;
+    width: 15%;
+    height: 21%;
+}
+
+/* Links no Rodapé */
+footer #títulos h3{
+    margin-top: 40px;
+    display: inline-block;
+    padding-right: 140px;
+}
+
+#detaque{
+    display: inline-block;
+    margin-left: 150px;
+}
+
+#text1{
+    margin-left: 12px;
+    display: inline-block;
+}
+#text1 a{
+    color: white;
+}
+#text1 a:hover{
+    font-weight: 700;
+    color: rgb(8, 37, 8)
+}
+
+#text2{
+    margin-left: 250px;
+    margin-top: -190px;
+}
+#text2 a{
+    color: white;
+}
+#text2 a:hover{
+    font-weight: 700;
+    color: rgb(8, 37, 8)
+}
+
+#text3{
+    margin-top: -100px;
+    margin-left: 635px;
+    display: inline-block;
+}
+#text3 a{
+    color: white;
+}
+
+#text3 a:hover{
+    font-weight: 700;
+    color: rgb(8, 37, 8)
+}
